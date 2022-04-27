@@ -1,0 +1,27 @@
+{
+	"name": "parcel-transformer-markdown-to-html",
+	"version": "1.0.0",
+	"description": "",
+	"main": "dist/index.js",
+	"source": "src/index.ts",
+	"scripts": {
+		"watch": "tsc --watch",
+		"build": "tsc",
+		"clean": "rimraf dist"
+	},
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"@types/node": "^17.0.29",
+		"rimraf": "^3.0.2",
+		"typescript": "^4.6.3"
+	},
+	"dependencies": {
+		"@parcel/diagnostic": "^2.5.0",
+		"@parcel/plugin": "^2.5.0"
+	},
+	"engines": {
+		"parcel": "^2.5.0",
+		"node": ">= 12.0.0"
+	}
+}
