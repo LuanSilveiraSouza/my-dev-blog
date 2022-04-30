@@ -1,18 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="./global.css" />
+  <script src="https://kit.fontawesome.com/39a4447f6f.js" crossorigin="anonymous"></script>
   <title>Document</title>
 </head>
+
 <body>
-  <h1 class="text-3xl font-bold text-red-400">Hello World</h1>
 
-  <div id="articles">
+  <header
+    class="w-full h-20 px-20 bg-stone-100 border-b-black-100 border-b-2 flex flex-row justify-between items-center">
+    <h1 class="w-auto text-4xl">Luan Souza Dev</h1>
 
-  </div>
+    <div class="w-24 flex flex-row justify-between items-center">
+      <a href="https://github.com/LuanSilveiraSouza">
+        <i class="fa-brands fa-github text-blue-800 text-xl"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/luan-souza-s/">
+        <i class="fa-brands fa-linkedin text-blue-800 text-xl"></i>
+      </a>
+      <a href="https://twitter.com/pescosauro">
+        <i class="fa-brands fa-twitter text-blue-800 text-xl"></i>
+      </a>
+    </div>
+  </header>
+
+  <main class="flex flex-col w-full my-4 px-8">
+    <h1 class="text-4xl mb-8 font-bold text-blue-800">Últimos artigos</h1>
+
+    <div class="w-full border-t-black-100 border-t-2 grid-cols-4" id="articles">
+  
+    </div>
+  </main>
 
   <script type="module" src="./index.js"></script>
 </body>
+
 </html>
