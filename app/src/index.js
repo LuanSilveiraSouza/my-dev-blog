@@ -1,5 +1,9 @@
-import markdown from './articles/test.md';
+import articles from "./articles";
 
-console.log(markdown);
+const index = document.querySelector("div#articles");
 
-console.log('Hello World');
+console.log(index);
+
+Object.values(articles).forEach((article) => {
+	index.innerHTML += `<div><a href="./${article.name}.html">${article.title}</a></div>`;
+});

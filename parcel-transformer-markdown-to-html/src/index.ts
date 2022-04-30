@@ -56,7 +56,7 @@ export default new Transformer({
 		}
 
 		await writeFileAsync(
-			`${config.distPath}${attributes.name}.html`,
+			`${config.distPath}/${attributes.name}.html`,
 			finalHtml
 		);
 
