@@ -25,6 +25,7 @@ export default new Transformer({
 		const { attributes, body } = await frontMatter<MarkdownAttributes>(
 			source
 		);
+		
 		const parsedHtml = marked(body);
 		const document = templateDom.window.document;
 
@@ -60,16 +61,12 @@ export default new Transformer({
 			finalHtml
 		);
 
-		console.log(`const attributes = {${Object.entries(attributes)
-			.map((item) => `${item[0]}:'${item[1]}',`)
-			.join("")}};
-		export default attributes;`);
-
 		asset.type = "js";
 		asset.setCode(`const attributes = {${Object.entries(attributes)
 			.map((item) => `${item[0]}:'${item[1]}',`)
 			.join("")}};
 		export default attributes;`);
+
 		// Return the asset
 		return [asset];
 	},
