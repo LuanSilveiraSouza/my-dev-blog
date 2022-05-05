@@ -1,7 +1,5 @@
 import articles from "./articles";
 
-console.log('Articles: ', articles);
-
 const index = document.querySelector("div#articles");
 
 Object.values(articles).forEach((article) => {

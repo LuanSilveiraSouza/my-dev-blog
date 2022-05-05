@@ -4,7 +4,7 @@
 	"description": "",
 	"scripts": {
 		"start": "parcel src/index.html --cache-dir .parcel-cache --no-autoinstall",
-		"build": "rimraf dist && parcel build src/index.html --cache-dir .parcel-cache --no-autoinstall",
+		"build": "npm run clean && parcel build src/index.html --cache-dir .parcel-cache --no-autoinstall",
 		"clean": "rimraf dist && rimraf .parcel-cache",
 		"serve": "http-server dist",
 		"format": "prettier --write src/**/* -u --no-error-on-unmatched-pattern"

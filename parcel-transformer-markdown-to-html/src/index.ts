@@ -25,14 +25,12 @@ export default new Transformer({
 		const parsedHtml = marked(body);
 		const document = templateDom.window.document;
 
-		const titleElement = document.querySelector("h1#title");
+		for (let index in attributes) {
+			const element = document.querySelector(`#template-${index}`);
 
-		if (titleElement) {
-			titleElement.innerHTML = `${attributes.title}`;
-		} else {
-			console.log(
-				`Could not find element with id 'title' in template default.html. Generating page without title.`
-			);
+			if (element) {
+				element.innerHTML = `${attributes[index as keyof MarkdownAttributes]}`;
+			} 
 		}
 
 		const pageContentElement = document.getElementById("page-content");
@@ -46,12 +44,6 @@ export default new Transformer({
 		}
 
 		const finalHtml = document.getElementsByTagName("html")[0].outerHTML;
-
-		// asset.type = "js";
-		// asset.setCode(`const attributes = {${Object.entries(attributes)
-		// 	.map((item) => `${item[0]}:'${item[1]}',`)
-		// 	.join("")}};
-		// export default attributes;`);
 
 		asset.type = "html";
 		asset.setCode(finalHtml);
