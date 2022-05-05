@@ -3,11 +3,7 @@ import { JSDOM } from "jsdom";
 import { marked } from "marked";
 import frontMatter from "front-matter";
 import path from "path";
-import { writeFile, readFile, existsSync, mkdir } from "fs";
-import { promisify } from "util";
 import MarkdownAttributes from "./MarkdownAttributes";
-
-const [writeFileAsync, mkdirAsync] = [promisify(writeFile), promisify(mkdir)];
 
 export default new Transformer({
 	async transform({ asset, logger }) {
@@ -25,7 +21,7 @@ export default new Transformer({
 		const { attributes, body } = await frontMatter<MarkdownAttributes>(
 			source
 		);
-		
+
 		const parsedHtml = marked(body);
 		const document = templateDom.window.document;
 
@@ -51,23 +47,27 @@ export default new Transformer({
 
 		const finalHtml = document.getElementsByTagName("html")[0].outerHTML;
 
-		if (!existsSync(config.distPath)) {
-			logger.info({ message: "Dist folder dont exists, creating..." });
-			await mkdirAsync(config.distPath);
-		}
+		// asset.type = "js";
+		// asset.setCode(`const attributes = {${Object.entries(attributes)
+		// 	.map((item) => `${item[0]}:'${item[1]}',`)
+		// 	.join("")}};
+		// export default attributes;`);
 
-		await writeFileAsync(
-			`${config.distPath}/${attributes.name}.html`,
-			finalHtml
-		);
-
-		asset.type = "js";
-		asset.setCode(`const attributes = {${Object.entries(attributes)
-			.map((item) => `${item[0]}:'${item[1]}',`)
-			.join("")}};
-		export default attributes;`);
+		asset.type = "html";
+		asset.setCode(finalHtml);
 
 		// Return the asset
-		return [asset];
+		return [
+			asset,
+			{
+				type: "js",
+				content: `const attributes = {${Object.entries(attributes)
+					.map((item) => `${item[0]}:'${item[1]}',`)
+					.join("")}};
+				export default attributes;`,
+				uniqueKey: `${asset.id}-js`,
+				bundleBehavior: "inline",
+			},
+		];
 	},
 });

@@ -23,6 +23,13 @@
     chalk "^2.0.0"
     js-tokens "^4.0.0"
 
+"@babel/runtime@^7.16.7":
+  version "7.17.9"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.17.9.tgz#d19fbf802d01a8cb6cf053a64e472d42c434ba72"
+  integrity sha512-lSiBBvodq29uShpWGNbgFdKYNiFDo5/HIYsaCEY9ff4sb10x9jizo2+pRrSyF4jKZCXqgzuqBOQKbUm90gQwJg==
+  dependencies:
+    regenerator-runtime "^0.13.4"
+
 "@lezer/common@^0.15.0", "@lezer/common@^0.15.7":
   version "0.15.12"
   resolved "https://registry.npmjs.org/@lezer/common/-/common-0.15.12.tgz"
@@ -284,7 +291,7 @@
   dependencies:
     chalk "^4.1.0"
 
-"@parcel/namer-default@2.5.0":
+"@parcel/namer-default@2.5.0", "@parcel/namer-default@^2.2.0":
   version "2.5.0"
   resolved "https://registry.npmjs.org/@parcel/namer-default/-/namer-default-2.5.0.tgz"
   integrity sha512-ahGQqHJzsWE5Qux8zXMAU+lyNBOl+ZpcOFzRGE2DWOsmAlytsHl7DBVCQvzUyNBFg1/HmIj+7D4efv2kjR7rTg==
@@ -423,7 +430,7 @@
     "@parcel/utils" "2.5.0"
     posthtml "^0.16.4"
 
-"@parcel/plugin@2.5.0", "@parcel/plugin@^2.5.0":
+"@parcel/plugin@2.5.0", "@parcel/plugin@^2.2.0", "@parcel/plugin@^2.5.0":
   version "2.5.0"
   resolved "https://registry.npmjs.org/@parcel/plugin/-/plugin-2.5.0.tgz"
   integrity sha512-obtb6/Gql6YFQ86bdv75A2Noabx8679reFZeyfKKf0L7Lppx4DFQetXwM9XVy7Gx6hJ1Ekm3UMuuIyVJk33YHQ==
@@ -1835,6 +1842,15 @@ ordered-binary@^1.2.4:
   resolved "https://registry.npmjs.org/ordered-binary/-/ordered-binary-1.2.5.tgz"
   integrity sha512-djRmZoEpOGvIRW7ufsCDHtvcUa18UC9TxnPbHhSVFZHsoyg0dtut1bWtBZ/fmxdPN62oWXrV6adM7NoWU+CneA==
 
+parcel-namer-hashless@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/parcel-namer-hashless/-/parcel-namer-hashless-1.0.3.tgz#8a6364c064b4156ea24aba4af31c1f76d58125be"
+  integrity sha512-Sr7SqwI3CA5jmO3luVtv3MObQBvArIV+wzt700XsEtihWVOudXckPrUhv/NEHTDng+CtbVr3fwcld4sWCKkufg==
+  dependencies:
+    "@babel/runtime" "^7.16.7"
+    "@parcel/namer-default" "^2.2.0"
+    "@parcel/plugin" "^2.2.0"
+
 parcel@^2.5.0:
   version "2.5.0"
   resolved "https://registry.npmjs.org/parcel/-/parcel-2.5.0.tgz"
@@ -2028,7 +2044,7 @@ readdirp@~3.6.0:
   dependencies:
     picomatch "^2.2.1"
 
-regenerator-runtime@^0.13.7:
+regenerator-runtime@^0.13.4, regenerator-runtime@^0.13.7:
   version "0.13.9"
   resolved "https://registry.npmjs.org/regenerator-runtime/-/regenerator-runtime-0.13.9.tgz"
   integrity sha512-p3VT+cOEgxFsRRA9X4lkI1E+k2/CtnKtU4gcxyaCUreilL/vqI6CdZ3wxVUx3UOUg+gnUOQQcRI7BmSI656MYA==
