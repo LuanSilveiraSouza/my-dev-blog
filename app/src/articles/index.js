@@ -1,3 +1,3 @@
-import testAttributes from "./test.md";
+import estruturasJavascriptAttributes from "./estruturas-javascript.md";
 
-export default { testAttributes };
+export default { estruturasJavascriptAttributes };
