@@ -13,7 +13,7 @@ Object.values(articles).forEach((article) => {
 				
 				<p>${article.date}</p>
 			</div>
-			<p class="text-sm h-auto flex-1 ml-2">${article.description}</p>
+			<p class="text-sm h-full flex-1 ml-2 truncate break-words">${article.description}</p>
 			<p class="font-bold self-end">Tags: ${article.tags}</p>
 		</div>
 	</a>

@@ -6,7 +6,7 @@ import path from "path";
 import MarkdownAttributes from "./MarkdownAttributes";
 
 export default new Transformer({
-	async transform({ asset, logger }) {
+	async transform({ asset }) {
 		const appPath = path.join(__dirname, "..", "..", "app");
 		const config = {
 			templatePath: `${appPath}/src/templates/default.html`,
