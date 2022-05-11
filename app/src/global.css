@@ -33,3 +33,16 @@ a {
 #page-content a {
   font-weight: bold;
 }
+
+@media only screen and (max-width:600px) {
+  #page-content img {
+    width: 95%;
+  }
+}
+
+#page-content img {
+  width: 70%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
