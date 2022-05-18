@@ -2,9 +2,10 @@ import articles from "./articles";
 
 const index = document.querySelector("div#articles");
 
-Object.values(articles).forEach((article) => {
-	const html = 
-	`<a href="${article.name}.html">
+Object.values(articles)
+	.sort((a, b) => Date.parse(String(b.date)) - Date.parse(String(a.date)))
+	.forEach((article) => {
+		const html = `<a href="${article.name}.html">
 		<div class="w-full h-40 p-2 border-blue-800 border-2 rounded-md 
 		hover:border-4 hover:rounded-lg transition-all duration-200 ease-out
 		flex flex-col">
@@ -18,5 +19,5 @@ Object.values(articles).forEach((article) => {
 		</div>
 	</a>
 	`;
-	index.innerHTML += html;
-});
+		index.innerHTML += html;
+	});
