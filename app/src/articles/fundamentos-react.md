@@ -2,8 +2,8 @@
 name: fundamentos-react
 title: Fundamentos de React na velocidade da luz
 description: Em medidas de tempo mais próximas de nós, em 4 minutos.
-date: 11/05/2022
-tags: [Javascript]
+date: 05/11/2022
+tags: [Javascript, Web Development]
 ---
 
 *Escrito originalmente em 28/09/2020*
