@@ -10,10 +10,10 @@ tags: [Javascript, Web Development]
 
 # Tabela de Tópicos
 - [**Introdução**](#introdução)
-- [**Planejamento**](#iniciando-no-react)
-- [**O Hello World das Extensões**](#o-jsx)
-- [**Scripts de Background**](#react-hooks)
-- [**Conclusão**](#próximos-passos)
+- [**Planejamento**](#planejamento)
+- [**O Hello World das Extensões**](#o-hello-world-das-extensões)
+- [**Scripts de Background**](#scripts-de-background)
+- [**Conclusão**](#conclusão)
 
 # Introdução
 Um dos motivos que alavanca o Chrome em relação aos browsers competidores é sua extensa comunidade de extensões, levando os outros navegadores a integrar o sistema de extensões do próprio Chrome para seguirem relevantes. O ecossistema é rico em diversas soluções para uma navegação mais sofisticada em possibilidades, e a Google faz um ótimo trabalho em simplificar o desenvolvimento das extensões.
