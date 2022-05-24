@@ -10,10 +10,10 @@ tags: [Algoritmos, Golang]
 
 # Tabela de Tópicos
 - [**Introdução**](#introdução)
-- [**Concepções sobre encoding, encrypting e hashing**](#complexidade-assintótica-e-big-o)
-- [**Como Base 64 funciona**](#comparação-entre-algoritmos)
-- [**Implementando Base 64 em Golang**](#comparação-entre-algoritmos)
-- [**Considerações finais**](#comparação-entre-algoritmos)
+- [**Concepções sobre encoding, encrypting e hashing**](#concepções-entre-encoding-encryption-e-hashing)
+- [**Como Base 64 funciona**](#como-base-64-funciona)
+- [**Implementando Base 64 em Golang**](#implementando-base-64-em-golang)
+- [**Considerações finais**](#considerações-finais)
 
 # Introdução
 Em algum momento de seus estudos em programação/ciência da computação, você irá se deparar com o encoding. Se você iniciou com HTML, por exemplo, uma das tags importantes de se incluir no ```<head>``` é a ```<meta charset>```. Esta tag expõe ao navegador que irá montar a árvore de elementos HTML qual tipo de codificação ele deve utilizar para mostrar apropriadamente os caracteres do arquivo.
