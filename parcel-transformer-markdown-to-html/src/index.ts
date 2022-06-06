@@ -25,12 +25,29 @@ export default new Transformer({
 		const parsedHtml = marked(body);
 		const document = templateDom.window.document;
 
-		for (let index in attributes) {
-			const element = document.querySelector(`#template-${index}`);
+		const titleElement = document.querySelector("title");
+		if (titleElement) {
+			titleElement.innerHTML = attributes.title;
+		}
+
+		for (let prop in attributes) {
+			const element = document.querySelector(`#template-${prop}`);
 
 			if (element) {
-				element.innerHTML = `${attributes[index as keyof MarkdownAttributes]}`;
-			} 
+				element.innerHTML = `${
+					attributes[prop as keyof MarkdownAttributes]
+				}`;
+			}
+
+			const metaElements = document.querySelectorAll(
+				`meta[content="${prop}"]`
+			);
+
+			metaElements.forEach(
+				(item: any) =>
+					(item.content =
+						attributes[prop as keyof MarkdownAttributes])
+			);
 		}
 
 		const pageContentElement = document.getElementById("page-content");
