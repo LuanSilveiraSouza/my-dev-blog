@@ -1,8 +1,9 @@
 ---
-name: aprendendo-encoding-golang
+slug: aprendendo-encoding-golang
 title: Aprendendo sobre encoding com Golang
 description: Criando uma CLI simples para codificar textos para Base 64
 date: 05/23/2022
+authors: luan
 tags: [Algoritmos, Golang]
 ---
 
@@ -35,7 +36,7 @@ Base 64 usa a tabela ASCII como referência para transformar textos na internet.
 
 Abaixo temos todos os passos e a tabela Base 64 para referência:
 
-![Esquerda: Tabela Base 64 / Direita: Processo de encoding Base 64](../img/aprendendo-encoding-golang-1.png)
+![Esquerda: Tabela Base 64 / Direita: Processo de encoding Base 64](./aprendendo-encoding-golang-1.png)
 
 Se você está acostumado a manipular bits, você provavelmente já se questionou: mudando de 8 para 6 bits por unidade algumas vezes criará uma coleção de caracteres com valores faltando. Quando isso acontece (e leia isso como: quando a string de input não possuir comprimento divisível por 3) o algoritmo precisa preencher os bits remanescentes com 0 e o último um ou dois elementos com um caractere de pad (=).
 
@@ -45,7 +46,7 @@ Obs: É importante notar que o Base 64 não é o melhor para performance, com el
 
 Golang possui em suas bibliotecas nativas métodos para encode e decode de Base 64. Mas para entendermos completamente, implementaremos do zero.
 
-![Encoder](../img/aprendendo-encoding-golang-2.png)
+![Encoder](./aprendendo-encoding-golang-2.png)
 
 À primeira vista parece bastante código, E realmente é (considerando uma funcionalidade já inclusa na linguagem). Mas tudo que é feito aqui é o mesmo dos passos feitos na imagem anterior. Primeiro, a string é convertida em cada um de seus caracteres para ASCII. Então, transforma em bytes, depois para pacotes de 6 bits. Usamos uma lista que representa a tabela Base 64 e uma função auxiliar arrayFind para mapear cada um desses pacotes para um dos índices do array, e por fim, se necessário, é adicionado um ou dois ‘=’ símbolos para lidar apropriadamente com os casos de exceção resultando na string Base 64 final.
 

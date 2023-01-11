@@ -1,8 +1,9 @@
 ---
-name: como-ransomwares-funcionam
+slug: como-ransomwares-funcionam
 title: Como ransomwares funcionam
 description: Criando um ransomware simples com Golang
 date: 05/24/2022
+authors: luan
 tags: [Segurança da Informação, Algoritmos, Golang]
 ---
 
@@ -16,7 +17,7 @@ tags: [Segurança da Informação, Algoritmos, Golang]
 - [**Considerações finais**](#considerações-finais)
 
 # Introdução
-![Richard Feynman](../img/como-ransomwares-funcionam-1.png)
+![Richard Feynman](./como-ransomwares-funcionam-1.png)
 
 *“O que não consigo criar, não entendo”* — Richard Feynman
 
@@ -47,21 +48,21 @@ Além do software que permanece na máquina da vítima, muitas vezes é utilizad
 
 A primeira parte é o explorador de arquivos. Com ele, conseguiremos “caminhar” por todos os diretórios desde a raiz ou especificando um diretório de início customizado.
 
-![explorer.go](../img/como-ransomwares-funcionam-2.png)
+![explorer.go](./como-ransomwares-funcionam-2.png)
 
 Na primeira seção, detectamos se SO é Windows ou Linux para pegar o diretório home correto (adicionar suporte a Mac seria o mesmo processo). Podemos especificar um diretório de início, ou o programa iniciará em /Downloads/Test. Este mecanismo previne execuções de teste de encriptar todos os arquivos na máquina. Então mapeamos e armazenamos os arquivos com filepath.WalkDir, retornando um array.
 
 Agora, precisamos de um programa auxiliar para gerar chaves de encriptação/decriptação. Escolhi o algoritmo AES-256-GCM, então é necessário uma chave de 32 bytes (para combinar com os 256 bits do algoritmo). Usaremos a mesma chave para as duas operações, mas num cenário realístisco o recomendado seria o uso de encriptação assimétrica (uma pública e uma privada).
 
-![keygen.go](../img/como-ransomwares-funcionam-3.png)
+![keygen.go](./como-ransomwares-funcionam-3.png)
 
 Depois iremos fazer o encriptador. Ele recebe, além da chave, um diretório de início e um email de contato. Usaremos a função MapFiles() para conseguir os arquivos, encriptá-los e reescrevê-los. Por último, um readme é gerado, informando a vítima que seus dados foram sequestrados e um contato para conseguir o programa de decriptação.
 
-![encrypter.go](../img/como-ransomwares-funcionam-4.png)
+![encrypter.go](./como-ransomwares-funcionam-4.png)
 
 O decriptador é muito semelhante ao encriptador, apenas invertendo a ordem das operações.
 
-![decrypter.go](../img/como-ransomwares-funcionam-5.png)
+![decrypter.go](./como-ransomwares-funcionam-5.png)
 
 # Considerações finais
 
