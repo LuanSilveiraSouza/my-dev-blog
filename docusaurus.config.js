@@ -43,9 +43,9 @@ const config = {
 
 	plugins: [
 		[
-			'./plugins/blog',
+			'./plugins/blog-plugin',
 			{
-				id: 'blog',
+				id: 'blog-home',
 				routeBasePath: 'blog',
 				path: './blog',
 				showReadingTime: true,
@@ -66,7 +66,7 @@ const config = {
 					src: 'img/icon.png',
 				},
 				items: [
-					{ to: '/', label: 'Blog', position: 'left' },
+					{ to: '/blog', label: 'Blog', position: 'left' },
 					{ to: '/about', label: 'Sobre', position: 'left' },
 					{ to: '/contact', label: 'Contato', position: 'left' },
 					{
@@ -97,7 +97,7 @@ const config = {
 						items: [
 							{
 								label: 'Blog',
-								to: '/',
+								to: '/blog',
 							},
 							{
 								label: 'Sobre mim',

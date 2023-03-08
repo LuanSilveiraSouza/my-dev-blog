@@ -14,10 +14,12 @@ async function blogPluginExtended(...pluginArgs) {
 				component: '@site/src/components/Home.tsx',
 				modules: {
 					recentPosts: recentPosts.map((post) => ({
-						__import: true,
-						path: post.metadata?.source,
-						query: {
-							truncated: true,
+						content: {
+							__import: true,
+							path: post.metadata?.source,
+							query: {
+								truncated: true,
+							},
 						},
 					})),
 				},

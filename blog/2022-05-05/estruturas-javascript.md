@@ -18,6 +18,8 @@ tags: [Javascript]
 # 1 -  Estruturas de condição compactas
 O If ternário é uma estrutura condicional adjacente aos já conhecidos if, else e else if. Ao utilizado, torna o código mais enxuto e organizado, contanto que restringido a sua função de execução de pequenos comandos complementares entre si e alinhados a representação de um "if" seguido de "else".
 
+<!--truncate-->
+
 ![Estruturas de condição compactas](./estruturas-javascript-1.png)
 
 # 2 - Evitando erros no Input de funções

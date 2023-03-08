@@ -25,6 +25,8 @@ Eu acho que essa frase de Richard Feynman, um importante físico do século pass
 
 Neste caminho, eventualmente todos se encontram com a área de Segurança da Informação (ou com um linguajar da moda, Hacking). É como o ying yang: programadores devem ter um pouco de hackers e vice versa.
 
+<!--truncate-->
+
 Algumas semanas atrás me fiz um questionamento: Como ransomwares funcionam? Acabei que estudei algumas implementações públicas e aqui estou para apresentar um pequeno exemplo de um dos tipos de cyber attacks mais usados hoje em dia.
 
 # Um pouco de história
