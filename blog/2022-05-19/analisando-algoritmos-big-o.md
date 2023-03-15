@@ -9,17 +9,17 @@ tags: [Algoritmos]
 
 *Escrito originalmente em 05/01/2021*
 
-# Tabela de Tópicos
-- [**Introdução**](#introdução)
-- [**Complexidade assintótica e Big O**](#complexidade-assintótica-e-big-o)
-- [**Comparação entre algoritmos**](#comparação-entre-algoritmos)
-
-# Introdução
 No início dos estudos de computação e na carreira como programador, é essencial que além da lógica de programação e das estruturas comuns a todas as linguagens de programação (condicionais, loops de repetição, etc) seja aprofundado os conhecimentos em estruturas de dados e algoritmos.
+
+<!--truncate-->
 
 Porém, há alguns conceitos que farão sentido apenas quando o programador começar a se envolver em projetos reais, onde pessoas utilizarão os sistemas criados por ele e diversos fatores entram em jogo, sendo um dos principais a performance e velocidade das aplicações.
 
 Os códigos escritos por desenvolvedores de software incluem não só toda a lógica necessária para seu funcionamento, mas também há o fator de subjetividade, sendo possível perceber as decisões e o modo de pensar do programador. Sabendo disso, a complexidade assintótica descreve o ponto de partida para a análise performática de algoritmos.
+
+# Tabela de Tópicos
+- [**Complexidade assintótica e Big O**](#complexidade-assintótica-e-big-o)
+- [**Comparação entre algoritmos**](#comparação-entre-algoritmos)
 
 # Complexidade assintótica e Big O
 Na ciência da computação, a complexidade assintótica é o estudo da velocidade de execução de algoritmos dado o fator de crescimento do número de inputs. Vale mencionar que a complexidade assintótica precede de análises puramente teóricas e matemáticas, não levando em considaração detalhes de tecnologias e/ou linguagens de programação.

@@ -9,21 +9,21 @@ tags: [Segurança da Informação, Algoritmos, Golang]
 
 *Escrito originalmente em 16/04/2021*
 
-# Tabela de Tópicos
-- [**Introdução**](#introdução)
-- [**Um pouco de história**](#um-pouco-de-história)
-- [**Estrutura básica**](#estrutura-básica)
-- [**Implementação em Golang**](#implementação-em-golang)
-- [**Considerações finais**](#considerações-finais)
-
-# Introdução
 ![Richard Feynman](./como-ransomwares-funcionam-1.png)
 
 *“O que não consigo criar, não entendo”* — Richard Feynman
 
 Eu acho que essa frase de Richard Feynman, um importante físico do século passado, resume bem a sensação que todo programador passa em seus estudos.
 
+<!--truncate-->
+
 Neste caminho, eventualmente todos se encontram com a área de Segurança da Informação (ou com um linguajar da moda, Hacking). É como o ying yang: programadores devem ter um pouco de hackers e vice versa.
+
+# Tabela de Tópicos
+- [**Um pouco de história**](#um-pouco-de-história)
+- [**Estrutura básica**](#estrutura-básica)
+- [**Implementação em Golang**](#implementação-em-golang)
+- [**Considerações finais**](#considerações-finais)
 
 Algumas semanas atrás me fiz um questionamento: Como ransomwares funcionam? Acabei que estudei algumas implementações públicas e aqui estou para apresentar um pequeno exemplo de um dos tipos de cyber attacks mais usados hoje em dia.
 

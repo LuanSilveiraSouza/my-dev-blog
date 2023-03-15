@@ -9,17 +9,18 @@ tags: [Javascript, Web Development]
 
 *Escrito originalmente em 28/09/2020*
 
+O frontend não se resume mais a apenas Html, Css e Javascript há algum tempo. O que conhecemos como “Web Moderna” foi estruturado em volta dos inúmeros frameworks e bibliotecas Javascript criadas.
+Entre elas, algumas se sobressaem e modelam o mercado: É o caso da trindade React, Angular e Vue (com menção ao Svelte que vem em pleno crescimento).
+
+<!--truncate-->
+
+O React se apresenta como uma biblioteca Javascript para construção de interfaces componentizadas e, como o nome sugere, sistemas reativos e interativos. É atualmente um dos maiores projetos open-source do Github, com +150K de estrelas no repositório oficial, que foi criado e é mantido pelo Facebook.
+
 # Tabela de Tópicos
-- [**Introdução**](#introdução)
 - [**Iniciando no React**](#iniciando-no-react)
 - [**O JSX**](#o-jsx)
 - [**React Hooks**](#react-hooks)
 - [**Próximos Passos**](#próximos-passos)
-
-# Introdução
-O frontend não se resume mais a apenas Html, Css e Javascript há algum tempo. O que conhecemos como “Web Moderna” foi estruturado em volta dos inúmeros frameworks e bibliotecas Javascript criadas. Entre elas, algumas se sobressaem e modelam o mercado: É o caso da trindade React, Angular e Vue (com menção ao Svelte que vem em pleno crescimento).
-
-O React se apresenta como uma biblioteca Javascript para construção de interfaces componentizadas e, como o nome sugere, sistemas reativos e interativos. É atualmente um dos maiores projetos open-source do Github, com +150K de estrelas no repositório oficial, que foi criado e é mantido pelo Facebook.
 
 # Iniciando no React
 Para entender claramente o uso do React, o recomendado é já ter boas noções de Html, Css e Javascript. Algum contato com NodeJS também irá ajudar!

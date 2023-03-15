@@ -9,19 +9,19 @@ tags: [Algoritmos, Golang]
 
 *Escrito originalmente em 05/01/2021*
 
-# Tabela de Tópicos
-- [**Introdução**](#introdução)
-- [**Concepções sobre encoding, encrypting e hashing**](#concepções-entre-encoding-encryption-e-hashing)
-- [**Como Base 64 funciona**](#como-base-64-funciona)
-- [**Implementando Base 64 em Golang**](#implementando-base-64-em-golang)
-- [**Considerações finais**](#considerações-finais)
-
-# Introdução
 Em algum momento de seus estudos em programação/ciência da computação, você irá se deparar com o encoding. Se você iniciou com HTML, por exemplo, uma das tags importantes de se incluir no ```<head>``` é a ```<meta charset>```. Esta tag expõe ao navegador que irá montar a árvore de elementos HTML qual tipo de codificação ele deve utilizar para mostrar apropriadamente os caracteres do arquivo.
+
+<!--truncate-->
 
 Encoding é o processo de representar caracteres a vida real em um computador. Como computadores entendem apenas binário, foi criado uma série de algoritmos e padrões para ligar coleções de símbolos a números binários.
 
 Além disso, encoding possui a responsabilidade de garantir que os dados que transitam pela internet se mantenham íntegros. Neste contexto, temos o Base 64, um formato de encoding que mapeia apenas 64 caracteres (o que é uma pequena quantidade comparado a outros métodos comuns, como ASCII e Unicode) e é utilizado para transmitir dados entre clientes e servidores. É útil não apenas para texto simples, mas também para anexos de emails e imagens.
+
+# Tabela de Tópicos
+- [**Concepções sobre encoding, encrypting e hashing**](#concepções-entre-encoding-encryption-e-hashing)
+- [**Como Base 64 funciona**](#como-base-64-funciona)
+- [**Implementando Base 64 em Golang**](#implementando-base-64-em-golang)
+- [**Considerações finais**](#considerações-finais)
 
 # Concepções entre encoding, encryption e hashing
 Um desentendimento comum que pessoas novas na ciência da computação possuem é saber a diferença entre estes 3 processos. Como vimos antes, encoding é apenas a representação de textos/arquivos em um formato específico que computadores consigam entender os dados como dados binários. Encoding não deve ser utilizado para proteger dados, pois este foi criado de forma ao decoding ser extremamente simples.

@@ -9,17 +9,17 @@ tags: [Javascript, Web Development]
 
 *Escrito originalmente em 26/11/2020*
 
+Um dos motivos que alavanca o Chrome em relação aos browsers competidores é sua extensa comunidade de extensões, levando os outros navegadores a integrar o sistema de extensões do próprio Chrome para seguirem relevantes. O ecossistema é rico em diversas soluções para uma navegação mais sofisticada em possibilidades, e a Google faz um ótimo trabalho em simplificar o desenvolvimento das extensões.
+
+<!--truncate-->
+
+Nos próximos parágrafos, pretendo realizar uma introdução ao desenvolvimento de Chrome Extensions. O objetivo final é uma extensão personalizada para fazer o download de vídeos do Twitter. Como requisitos fica o conhecimento básico de HTML, CSS e Javascript.
+
 # Tabela de Tópicos
-- [**Introdução**](#introdução)
 - [**Planejamento**](#planejamento)
 - [**O Hello World das Extensões**](#o-hello-world-das-extensões)
 - [**Scripts de Background**](#scripts-de-background)
 - [**Conclusão**](#conclusão)
-
-# Introdução
-Um dos motivos que alavanca o Chrome em relação aos browsers competidores é sua extensa comunidade de extensões, levando os outros navegadores a integrar o sistema de extensões do próprio Chrome para seguirem relevantes. O ecossistema é rico em diversas soluções para uma navegação mais sofisticada em possibilidades, e a Google faz um ótimo trabalho em simplificar o desenvolvimento das extensões.
-
-Nos próximos parágrafos, pretendo realizar uma introdução ao desenvolvimento de Chrome Extensions. O objetivo final é uma extensão personalizada para fazer o download de vídeos do Twitter. Como requisitos fica o conhecimento básico de HTML, CSS e Javascript.
 
 # Planejamento
 Antes de começar o desenvolvimento em si, vamos tracejar o caminho da extensão de forma manual. O Twitter utiliza para os vídeos o formato m3u8, que é derivado do m3u. Este tipo de arquivo armazena uma lista multimídia que será baixada quando executado. O 8 apenas significa que o formato será encodado em UTF-8 (para mais informações sobre UTF-8:
