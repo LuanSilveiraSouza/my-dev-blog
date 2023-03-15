@@ -9,6 +9,8 @@ tags: [Javascript]
 
 *Escrito originalmente em 03/06/2020*
 
+<!--truncate-->
+
 # Tabela de Tópicos
 - [**1 -  Estruturas de condição compactas**](#1-estruturas-de-condição-compactas)
 - [**2 - Evitando erros no Input de funções**](#2-evitando-erros-no-input-de-funções)

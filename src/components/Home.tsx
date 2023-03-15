@@ -9,14 +9,13 @@ interface Props {
 	readonly posts: readonly { readonly content: Content }[];
 }
 
-export default function Home({ recentPosts }) {
-	console.log(recentPosts);
+export default function Home({ posts }: Props) {
 	return (
 		<Layout>
 			<div className='container margin-top--xl margin-bottom--lg'>
 				<div className='row'>
 					<div className='col col--9 col--offset-1'>
-						{recentPosts.map(({ content: BlogPostContent }) => (
+						{posts.map(({ content: BlogPostContent }) => (
 							<BlogPostProvider
 								key={BlogPostContent.metadata.permalink}
 								content={BlogPostContent}
