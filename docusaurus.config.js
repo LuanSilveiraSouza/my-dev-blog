@@ -14,6 +14,8 @@ const config = {
 	onBrokenMarkdownLinks: 'warn',
 	favicon: 'img/favicon.png',
 
+	staticDirectories: ['public', 'static'],
+
 	// GitHub pages deployment config.
 	// If you aren't using GitHub pages, you don't need these.
 	organizationName: 'LuanSilveiraSouza', // Usually your GitHub org/user name.
@@ -49,7 +51,8 @@ const config = {
 				routeBasePath: 'blog',
 				path: './blog',
 				showReadingTime: true,
-				blogSidebarCount: 0,
+				blogSidebarTitle: 'Posts',
+				blogSidebarCount: 'ALL'
 			},
 		],
 	],

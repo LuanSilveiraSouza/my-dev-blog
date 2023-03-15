@@ -7,13 +7,14 @@ async function blogPluginExtended(...pluginArgs) {
 	return {
 		...blogPluginInstance,
 		contentLoaded: async function (data) {
-			const recentPosts = [...data.content.blogPosts].splice(0, 5);
+			console.log(data);
+			const posts = [...data.content.blogPosts].splice(0, 4);
 			data.actions.addRoute({
 				path: '/',
 				exact: 'true',
 				component: '@site/src/components/Home.tsx',
 				modules: {
-					recentPosts: recentPosts.map((post) => ({
+					posts: posts.map((post) => ({
 						content: {
 							__import: true,
 							path: post.metadata?.source,
