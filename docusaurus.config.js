@@ -72,7 +72,6 @@ const config = {
 				items: [
 					{ to: '/blog', label: 'Blog', position: 'left' },
 					{ to: '/about', label: 'Sobre', position: 'left' },
-					{ to: '/contact', label: 'Contato', position: 'left' },
 					{
 						href: 'https://github.com/LuanSilveiraSouza',
 						label: 'GitHub',
@@ -106,10 +105,6 @@ const config = {
 							{
 								label: 'Sobre mim',
 								to: '/about',
-							},
-							{
-								label: 'Contato',
-								to: '/contact',
 							},
 						],
 					},
