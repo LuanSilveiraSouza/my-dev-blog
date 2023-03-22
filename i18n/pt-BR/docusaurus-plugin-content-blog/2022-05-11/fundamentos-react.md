@@ -22,7 +22,7 @@ O React se apresenta como uma biblioteca Javascript para construção de interfa
 - [**React Hooks**](#react-hooks)
 - [**Próximos Passos**](#próximos-passos)
 
-## Iniciando no React
+# Iniciando no React
 Para entender claramente o uso do React, o recomendado é já ter boas noções de Html, Css e Javascript. Algum contato com NodeJS também irá ajudar!
 
 A forma mais rápida e prática para começar é utilizando o Create React App, outro pacote do npm criado pelo Facebook que visa contruir um template com a estrutura básica de um projeto em React.
@@ -49,7 +49,7 @@ No React podemos utilizar as tags Html junto do Javascript, e também criar noss
 # React Hooks
 Aqui mora uma das magias do React e de sua facilidade de lidar com a reatividade e a interatividade. Os Hooks são “gatilhos” inclusos no React que servem para diversas implementações, cada um com sua especificidade. Abordaremos aqui os 2 mais utilizados e must-know: useState e useEffect.
 
-## useState
+### useState
 
 O useState nos permite o armazenamento de estados próprios do componente, e atualizar a tela sempre que o estado for atualizado.
 
@@ -57,7 +57,7 @@ O useState nos permite o armazenamento de estados próprios do componente, e atu
 
 O useState possui um formato diferente, pois não é uma variável convencional: ele segue o princípio da imutabilidade (da programação funcional), onde o valor não pode ser alterado, e quando se quer atualizar deve-se criar um novo valor imutável com base no anterior. Por isso utilizamos a função setCount para atualizar a contagem de cliques.
 
-## useEffect
+### useEffect
 
 O useEffect invoca uma função de controle de ciclo de vida. Com ele, conseguimos executar subrotinas de acordo com o efeito colateral desejado.
 

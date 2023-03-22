@@ -2,7 +2,6 @@
 slug: analisando-algoritmos-big-o
 title: Analisando performance de algoritmos com Big O
 description: Como tomar melhores decições a partir do entendimento da notação Big O
-date: 05/19/2022
 authors: luan
 tags: [Algoritmos]
 ---
@@ -21,7 +20,7 @@ Os códigos escritos por desenvolvedores de software incluem não só toda a ló
 - [**Complexidade assintótica e Big O**](#complexidade-assintótica-e-big-o)
 - [**Comparação entre algoritmos**](#comparação-entre-algoritmos)
 
-# Complexidade assintótica e Big O
+## Complexidade assintótica e Big O
 Na ciência da computação, a complexidade assintótica é o estudo da velocidade de execução de algoritmos dado o fator de crescimento do número de inputs. Vale mencionar que a complexidade assintótica precede de análises puramente teóricas e matemáticas, não levando em considaração detalhes de tecnologias e/ou linguagens de programação.
 
 O Big O é uma notação criada para simplificar todo o entendimento da complexidade assintótica de algoritmos. Considerando uma quantia n, o Big O classifica algoritmos conforme o tempo de execução cresce dado que n tende ao infinito, demonstrando todo o processo por gráficos de funções.
@@ -30,7 +29,7 @@ O Big O é uma notação criada para simplificar todo o entendimento da complexi
 
 O gráfico acima demonstra os valores do Big O mais comuns para algoritmos. Percebe-se que O(n log n) e O(n) possuem um crescimento constante do tempo de execução conforme o número de inputs cresce, por exemplo. Algoritmos de O(n²) para cima devem ser evitados, pois o tempo se torna exponencial e, em casos de um grande número de entradas, o tempo de resposta não será satisfatório. A exponencialidade geralmente está conectada com processos do algoritmo, sendo o mais comum deles a execução de um laço de repetição dentro de outro, o que causa intenso processamento e consequentemente lentidão.
 
-# Comparação entre algoritmos
+## Comparação entre algoritmos
 
 Como exemplo prático, foi selecionado 3 algoritmos de ordenação de listas bem conhecidos. Como o intuito não é os algoritmos em si, apenas será considerado uma breve explicação deles.
 

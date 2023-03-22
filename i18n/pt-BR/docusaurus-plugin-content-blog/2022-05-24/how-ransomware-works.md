@@ -1,15 +1,14 @@
 ---
-slug: como-ransomwares-funcionam
+slug: how-ransomware-works
 title: Como ransomwares funcionam
 description: Criando um ransomware simples com Golang
-date: 05/24/2022
 authors: luan
 tags: [Segurança da Informação, Algoritmos, Golang]
 ---
 
 *Escrito originalmente em 16/04/2021*
 
-![Richard Feynman](./como-ransomwares-funcionam-1.png)
+![Richard Feynman](./how-ransomware-works-1.png)
 
 *“O que não consigo criar, não entendo”* — Richard Feynman
 
@@ -27,7 +26,7 @@ Neste caminho, eventualmente todos se encontram com a área de Segurança da Inf
 
 Algumas semanas atrás me fiz um questionamento: Como ransomwares funcionam? Acabei que estudei algumas implementações públicas e aqui estou para apresentar um pequeno exemplo de um dos tipos de cyber attacks mais usados hoje em dia.
 
-# Um pouco de história
+## Um pouco de história
 Os primeiros registros de ataques por ransomware bem sucedidos datam de 2005, mas foi na última década que as ocorrências explodiram.
 
 Por conta de sua natureza, ransomwares são tipicamente usados com grandes companhias como alvos. Alguns exemplos são o CryptoLocker e o WannaCry, dois ransomwares que infectaram milhares de máquinas e causaram um grande estrago.
@@ -36,7 +35,7 @@ Há duas maneiras que hackers tornam ransomwares uma grande ameaça. Primeiro, h
 
 As companhias por trás desses sistemas (Microsoft, empresas de antivírus, etc) desempenham um grande esforço combatendo as falhas e as corrigindo. Portanto também é muito utilizado o clássico phishing, camuflando o malware em PDFs, executáveis e outros conteúdos baixáveis.
 
-# Estrutura básica
+## Estrutura básica
 
 Ransomwares são essencialmente programas que escaneiam todos os arquivos e os encriptam. Os arquivos são “sequestrados”, pois o hacker exige um pagamento de resgate (comumente com bitcoin ou outra cryptomoeda por conta da anonimicidade das transações) para enviar a chave de descriptografia.
 
@@ -44,27 +43,27 @@ Se a vítima não possui backups, provavelmente não há muito o que ser feito a
 
 Além do software que permanece na máquina da vítima, muitas vezes é utilizado um servidor de comando. O servidor recebe dados de todas as vítimas que tiveram seus dados encriptados e fica responsável por checar o status do pagamento para o envio da chave de descriptografia.
 
-# Implementação em Golang
+## Implementação em Golang
 
 A primeira parte é o explorador de arquivos. Com ele, conseguiremos “caminhar” por todos os diretórios desde a raiz ou especificando um diretório de início customizado.
 
-![explorer.go](./como-ransomwares-funcionam-2.png)
+![explorer.go](./how-ransomware-works-2.png)
 
 Na primeira seção, detectamos se SO é Windows ou Linux para pegar o diretório home correto (adicionar suporte a Mac seria o mesmo processo). Podemos especificar um diretório de início, ou o programa iniciará em /Downloads/Test. Este mecanismo previne execuções de teste de encriptar todos os arquivos na máquina. Então mapeamos e armazenamos os arquivos com filepath.WalkDir, retornando um array.
 
 Agora, precisamos de um programa auxiliar para gerar chaves de encriptação/decriptação. Escolhi o algoritmo AES-256-GCM, então é necessário uma chave de 32 bytes (para combinar com os 256 bits do algoritmo). Usaremos a mesma chave para as duas operações, mas num cenário realístisco o recomendado seria o uso de encriptação assimétrica (uma pública e uma privada).
 
-![keygen.go](./como-ransomwares-funcionam-3.png)
+![keygen.go](./how-ransomware-works-3.png)
 
 Depois iremos fazer o encriptador. Ele recebe, além da chave, um diretório de início e um email de contato. Usaremos a função MapFiles() para conseguir os arquivos, encriptá-los e reescrevê-los. Por último, um readme é gerado, informando a vítima que seus dados foram sequestrados e um contato para conseguir o programa de decriptação.
 
-![encrypter.go](./como-ransomwares-funcionam-4.png)
+![encrypter.go](./how-ransomware-works-4.png)
 
 O decriptador é muito semelhante ao encriptador, apenas invertendo a ordem das operações.
 
-![decrypter.go](./como-ransomwares-funcionam-5.png)
+![decrypter.go](./how-ransomware-works-5.png)
 
-# Considerações finais
+## Considerações finais
 
 Para rodar todas as partes do programa, use ‘go build’ para gerar os executáveis para as plataformas e arquiteturas necessárias. Por exemplo, para gerar para Windows use:
 

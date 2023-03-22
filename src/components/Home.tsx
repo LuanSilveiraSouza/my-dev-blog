@@ -3,6 +3,7 @@ import Layout from '@theme/Layout';
 import BlogPostItem from '@theme/BlogPostItem';
 import { Content } from '@theme/BlogPostPage';
 import { BlogPostProvider } from '@docusaurus/theme-common/internal';
+import Translate from '@docusaurus/Translate';
 import PaginatorNavLink from '@theme/PaginatorNavLink';
 import BackgroundImage from '@site/static/img/background.jpg';
 
@@ -34,13 +35,13 @@ export default function Home({ posts }: Props) {
 					<div className='col col--9 col--offset-1'>
 						<h1 className='hero__title'>Luan Souza</h1>
 						<p className='hero__subtitle'>
-							Desenvolvimento de Software e Tecnologia
+							<Translate>Software and Technology Development</Translate>
 						</p>
 					</div>
 				</div>
 			</div>
 			<div className='container margin-top--xl' style={{ zIndex: 1 }}>
-				<h1>Posts mais recentes</h1>
+				<h1><Translate>Recent posts</Translate></h1>
 			</div>
 			<div className='container margin-top--md margin-bottom--lg' style={{ zIndex: 1 }}>
 				<div className='row'>
