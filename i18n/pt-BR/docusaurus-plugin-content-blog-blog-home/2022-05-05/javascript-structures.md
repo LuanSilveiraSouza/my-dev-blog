@@ -1,7 +1,7 @@
 ---
 slug: javascript-structures
 title: 4 Estruturas para melhorar códigos Javascript
-description: 
+description: 4 dicas para desenvolver código Javascript eficiente, conciso e moderno.
 authors: luan
 tags: [Javascript]
 ---
