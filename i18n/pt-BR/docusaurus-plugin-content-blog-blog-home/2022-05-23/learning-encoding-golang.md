@@ -1,8 +1,7 @@
 ---
-slug: aprendendo-encoding-golang
+slug: learning-encoding-golang
 title: Aprendendo sobre encoding com Golang
 description: Criando uma CLI simples para codificar textos para Base 64
-date: 05/23/2022
 authors: luan
 tags: [Algoritmos, Golang]
 ---
@@ -23,34 +22,34 @@ Além disso, encoding possui a responsabilidade de garantir que os dados que tra
 - [**Implementando Base 64 em Golang**](#implementando-base-64-em-golang)
 - [**Considerações finais**](#considerações-finais)
 
-# Concepções entre encoding, encryption e hashing
+## Concepções entre encoding, encryption e hashing
 Um desentendimento comum que pessoas novas na ciência da computação possuem é saber a diferença entre estes 3 processos. Como vimos antes, encoding é apenas a representação de textos/arquivos em um formato específico que computadores consigam entender os dados como dados binários. Encoding não deve ser utilizado para proteger dados, pois este foi criado de forma ao decoding ser extremamente simples.
 
 *Encryption* é o processo onde os dados são passados por um algoritmo que o transforma em textos incompreensíveis. Esses algoritmos agem com um conjunto de chaves que permitem diferentes entidades encriptar e decriptar. Normalmente, é implementado uma chave pública para encriptar dados, e apenas quem possui a chave privada consegue decriptar a mesma informação. O propósito aqui é trocar dados com segurança e confiabilidade.
 
 *Hashing*, semelhante a encriptação, passa os dados num algoritmo que os transforma em uma massa de símbolos e letras aleatórias, com o detalhe que no hashing não há o processo reverso. Isto significa que dados transformados não podem ser revertidos. Se um hash é inserido no algoritmo novamente este apenas gera outro hash, e assim adiante. Hash é o procedimento mais seguro, portanto é utilizado em dados sensíveis que necessitam de ser armazenados e persistidos, como senhas de usuários em banco de dados de sistemas.
 
-# Como Base 64 funciona
+## Como Base 64 funciona
 
 Base 64 usa a tabela ASCII como referência para transformar textos na internet. Ele transpila todos os caracteres em binários ASCII e muda a seleção de byte (8 bits) a byte para 6 bits a 6 bits. Dessa forma, cada unidade possui 6 bits, com um máximo de 64 caracteres. Finalmente, a tabela converte estas coleções de bits para sua representações da tabela Base 64.
 
 Abaixo temos todos os passos e a tabela Base 64 para referência:
 
-![Esquerda: Tabela Base 64 / Direita: Processo de encoding Base 64](./aprendendo-encoding-golang-1.png)
+![Esquerda: Tabela Base 64 / Direita: Processo de encoding Base 64](./learning-encoding-golang-1.png)
 
 Se você está acostumado a manipular bits, você provavelmente já se questionou: mudando de 8 para 6 bits por unidade algumas vezes criará uma coleção de caracteres com valores faltando. Quando isso acontece (e leia isso como: quando a string de input não possuir comprimento divisível por 3) o algoritmo precisa preencher os bits remanescentes com 0 e o último um ou dois elementos com um caractere de pad (=).
 
 Obs: É importante notar que o Base 64 não é o melhor para performance, com ele aumenta o tamanho da string em 33%.
 
-# Implementando Base 64 em Golang
+## Implementando Base 64 em Golang
 
 Golang possui em suas bibliotecas nativas métodos para encode e decode de Base 64. Mas para entendermos completamente, implementaremos do zero.
 
-![Encoder](./aprendendo-encoding-golang-2.png)
+![Encoder](./learning-encoding-golang-2.png)
 
 À primeira vista parece bastante código, E realmente é (considerando uma funcionalidade já inclusa na linguagem). Mas tudo que é feito aqui é o mesmo dos passos feitos na imagem anterior. Primeiro, a string é convertida em cada um de seus caracteres para ASCII. Então, transforma em bytes, depois para pacotes de 6 bits. Usamos uma lista que representa a tabela Base 64 e uma função auxiliar arrayFind para mapear cada um desses pacotes para um dos índices do array, e por fim, se necessário, é adicionado um ou dois ‘=’ símbolos para lidar apropriadamente com os casos de exceção resultando na string Base 64 final.
 
-# Considerações finais
+## Considerações finais
 
 Há outros métodos importantes de encoding que devem ser entendidos, como o Unicode, mas não abordamos neste post.
 

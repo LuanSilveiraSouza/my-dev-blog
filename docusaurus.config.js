@@ -26,7 +26,7 @@ const config = {
 	// to replace "en" with "zh-Hans".
 	i18n: {
 		defaultLocale: 'en',
-		locales: ['en'],
+		locales: ['en', 'pt-BR'],
 	},
 
 	presets: [
@@ -52,7 +52,7 @@ const config = {
 				path: './blog',
 				showReadingTime: true,
 				blogSidebarTitle: 'Posts',
-				blogSidebarCount: 'ALL'
+				blogSidebarCount: 'ALL',
 			},
 		],
 	],
@@ -70,20 +70,16 @@ const config = {
 					src: 'img/icon.png',
 				},
 				items: [
-					{ to: '/blog', label: 'Blog', position: 'left' },
-					{ to: '/about', label: 'Sobre', position: 'left' },
-					{
-						href: 'https://github.com/LuanSilveiraSouza',
-						label: 'GitHub',
-						position: 'right',
-					},
+					{ type: 'localeDropdown', position: 'right' },
+					{ to: '/blog', label: 'Blog', position: 'right' },
+					{ to: '/about', label: 'About', position: 'right' },
 				],
 			},
 			footer: {
 				style: 'dark',
 				links: [
 					{
-						title: 'Contato',
+						title: 'Contact',
 						items: [
 							{
 								label: 'GitHub',
@@ -96,14 +92,14 @@ const config = {
 						],
 					},
 					{
-						title: 'Seções',
+						title: 'Sections',
 						items: [
 							{
 								label: 'Blog',
 								to: '/blog',
 							},
 							{
-								label: 'Sobre mim',
+								label: 'About',
 								to: '/about',
 							},
 						],
